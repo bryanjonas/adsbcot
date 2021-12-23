@@ -14,14 +14,13 @@ outputs:
   cot:
     type: cot
     stimuli:
-      service: adsb
+      adsb:
         type: inject
         file:
           - 'inputs/adsb.txt'
     recipients: 
-      service: tak
+      tak:
         type: recieve
         file: 
           - 'outputs/cot1.xml'
           - 'outputs/cot2.xml'
-
