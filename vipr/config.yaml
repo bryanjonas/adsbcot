@@ -1,0 +1,23 @@
+system:
+  name: adsbcot
+  repo: https://github.com/bryanjonas/adsbcot
+
+external-services:
+  adsb:
+    port: 30002
+  tak:
+    port: 8087
+
+outputs:
+  cot:
+    type: cot
+    stimulus:
+      type: network
+        file: 'inputs/adsb.txt'
+      origin: adsb
+    recipient: tak
+      type: network
+        file: 
+          - 'outputs/cot1.xml'
+          - 'outputs/cot2.xml'
+
