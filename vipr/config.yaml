@@ -4,8 +4,10 @@ system:
 
 external-services:
   adsb:
+    type: network
     port: 30002
   tak:
+    type: network
     port: 8087
 
 outputs:
@@ -13,13 +15,13 @@ outputs:
     type: cot
     stimulus:
       service: adsb
-      type: network
+      type: inject
       file:
           - 'inputs/adsb.txt'
       origin: adsb
     recipient: 
       service: tak
-      type: network
+      type: recieve
       file: 
           - 'outputs/cot1.xml'
           - 'outputs/cot2.xml'
