@@ -12,12 +12,15 @@ outputs:
   cot:
     type: cot
     stimulus:
+      service: adsb
       type: network
-        file: 'inputs/adsb.txt'
+      file:
+          - 'inputs/adsb.txt'
       origin: adsb
-    recipient: tak
+    recipient: 
+      service: tak
       type: network
-        file: 
+      file: 
           - 'outputs/cot1.xml'
           - 'outputs/cot2.xml'
 
