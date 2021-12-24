@@ -1,6 +1,7 @@
 system:
   name: adsbcot
   repo: https://github.com/bryanjonas/adsbcot
+  image: python3.6-slim-buster
 
 external-services:
   adsb:
